@@ -1,0 +1,36 @@
+{
+    "name": "teams-dark-form-app",
+    "version": "1.0.0",
+    "description": "A dark mode form app using Electron and Fluent UI with Microsoft Teams styling",
+    "main": "main.js",
+    "scripts": {
+      "start": "electron .",
+      "package": "electron-builder"
+    },
+    "author": "",
+    "license": "MIT",
+    "devDependencies": {
+      "electron": "^29.0.0",
+      "electron-builder": "^24.6.4"
+    },
+    "build": {
+      "appId": "com.example.teams-dark-form-app",
+      "productName": "Teams Dark Form App",
+      "directories": {
+        "output": "dist"
+      },
+      "win": {
+        "target": "nsis",
+        "icon": "assets/icon.ico"
+      },
+      "mac": {
+        "target": "dmg",
+        "icon": "assets/icon.icns",
+        "darkModeSupport": true
+      },
+      "linux": {
+        "target": "AppImage",
+        "icon": "assets/icon.png"
+      }
+    }
+  }
